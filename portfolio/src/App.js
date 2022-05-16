@@ -3,8 +3,6 @@ import Menu from "./components/menu/Menu"
 import Intro from "./components/intro/Intro"
 import Portfolio from "./components/portfolio/Portfolio"
 import Works from "./components/works/Works"
-import Testimonials from "./components/testimonials/Testimonials"
-import Contact from "./components/contact/Contact"
 import "./app.scss"
 import { BsLightbulbFill } from 'react-icons/bs'
 import { MdNightlight } from 'react-icons/md'
@@ -26,14 +24,12 @@ function App() {
         <Intro darkmode={darkmode}/>
         <Portfolio darkmode={darkmode}/>
         <Works darkmode={darkmode}/>
-        <Testimonials darkmode={darkmode}/>
-        <Contact darkmode={darkmode}/>
       </div>
       <div className="iconContainer">
         <span className={"darkmodeIcon " + (darkmode && "dark")}>
           <span onClick={() => handleClick()}>
-            <MdNightlight className={(darkmode == false ? "active" : "none")}/>
-            <BsLightbulbFill className={(darkmode == false ? "none" : "active")}/>
+            <MdNightlight className={(darkmode === false ? "active" : "none")}/>
+            <BsLightbulbFill className={(darkmode === false ? "none" : "active")}/>
           </span>
         </span>
       </div>

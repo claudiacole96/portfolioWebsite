@@ -12,7 +12,7 @@ export default function Intro({darkmode}) {
             showCursor: true,
             backDelay: 1500,
             backSpeed: 60,
-            strings: [" Frontend Designer", " Backend Developer", " Responsive Web App", "n Online Store"]
+            strings: [" Frontend Designer", " Backend Developer", " JavaScript Developer", " React Developer", " Creative Problem Solver"]
         })
     },[]);
 

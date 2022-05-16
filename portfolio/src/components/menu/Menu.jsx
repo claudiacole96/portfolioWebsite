@@ -14,12 +14,6 @@ export default function Menu({ menuOpen, setMenuOpen, darkmode}) {
                 <li onClick={() => setMenuOpen(false)}>
                     <a href="#works">Works</a>
                 </li>
-                <li onClick={() => setMenuOpen(false)}>
-                    <a href="#testimonials">Testimonials</a>
-                </li>
-                <li onClick={() => setMenuOpen(false)}>
-                    <a href="#contact">Contact</a>
-                </li>
             </ul>
         </div>
     )

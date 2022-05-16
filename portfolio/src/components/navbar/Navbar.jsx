@@ -14,20 +14,20 @@ export default function Navbar({ menuOpen, setMenuOpen, darkmode }) {
                         <div className="icon">
                             <AiFillMail/>
                         </div>
-                        <span>claudiacoledev@gmail.com</span>
+                        <span>claudiacole1996@gmail.com</span>
                     </div>
                 </div>
                 <div className="right">
                     <div className="social-links">
                         <div className="icons">
                             <div className="icon">
-                                <AiFillLinkedin/>
+                                <a className={(darkmode && " dark ") + (menuOpen && " active ")} href="https://www.linkedin.com/in/claudiacole96/"><AiFillLinkedin/></a>
                             </div>
                             <div className="icon">
-                                <AiOutlineTwitter/>
+                                <a className={(darkmode && " dark ") + (menuOpen && " active ")} href="https://twitter.com/claudiacole96"><AiOutlineTwitter/></a>
                             </div>
                             <div className="icon">
-                                <AiFillGithub/>
+                                <a className={(darkmode && " dark ") + (menuOpen && " active ")} href="https://github.com/claudiacole96"><AiFillGithub/></a>
                             </div>
                     </div>
                     </div>

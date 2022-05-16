@@ -25,7 +25,7 @@
                 width: 25%;
 
                 @include mobile {
-                    width: 60%;
+                    width: 90%;
                 }
 
                 img {
@@ -69,6 +69,10 @@
                 .icons {
                     display: flex;
                     justify-content: space-between;
+
+                    @include mobile {
+                        
+                    }
                     
                     .icon {
                         font-size: 25px;
@@ -77,9 +81,31 @@
                         justify-content: flex-end;
                         flex-direction: column;
 
-                        &:hover {
-                            cursor: pointer;
-                            color: $palletColor5;
+                        @include mobile {
+                            width: 100px;
+                        }
+
+                        a {
+                            color: $palletColor1;
+
+                            &.active {
+                                color: $palletColor3;
+
+                                &:hover {
+                                    color: $palletColor2;
+                                }
+
+                                &.dark {
+                                    &:hover {
+                                        color: $palletColor1;
+                                    }
+                                }
+                            }
+
+                            &:hover {
+                                cursor: pointer;
+                                color: $palletColor2;
+                            }
                         }
                     }
                 }
@@ -92,6 +118,10 @@
                 flex-direction: column;
                 justify-content: space-between;
                 cursor: pointer;
+
+                @include mobile {
+                    width: 90px;
+                }
 
                 span {
                     width: 100%;
