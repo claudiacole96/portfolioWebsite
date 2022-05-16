@@ -1,0 +1,131 @@
+@import "../../global.scss";
+
+.navbar {
+    width: 100vw;
+    height: 70px;
+    background-color: $palletColor3;
+    color: $palletColor1;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+
+    .wrapper {
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 1s ease;
+
+        .left {
+            display: flex;
+            align-items: center;
+
+            .logo {
+                text-decoration: none;
+                width: 25%;
+
+                @include mobile {
+                    width: 60%;
+                }
+
+                img {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 100%;
+                }
+            }
+
+            .itemContainer {
+                display: flex;
+                align-items: center;
+                margin-left: 30px;
+
+                @include mobile {
+                    display: none;
+                }
+
+                .icon {
+                    font-size: 18px;
+                    margin-right: 5px;
+                    display: flex;
+                    justify-content: flex-end;
+                    flex-direction: column;
+                }
+
+                span {
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            justify-content: space-between;
+
+            .social-links {
+                margin-right: 10px;
+                .icons {
+                    display: flex;
+                    justify-content: space-between;
+                    
+                    .icon {
+                        font-size: 25px;
+                        margin-right: 15px;
+                        display: flex;
+                        justify-content: flex-end;
+                        flex-direction: column;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: $palletColor5;
+                        }
+                    }
+                }
+            }
+
+            .hamburger {
+                width: 32px;
+                height: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+
+                span {
+                    width: 100%;
+                    height: 3px;
+                    background-color: $palletColor1;
+                    transform-origin: left;
+                    transition: all 2s ease;
+                }
+            }
+        }
+    }
+
+    &.active {
+        background-color: $palletColor1;
+        color: $palletColor3;
+
+        &.dark {
+            background-color: $palletColor4;
+        }
+
+        .hamburger {
+            span {
+                &:first-child {
+                    background-color: $palletColor3;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:last-child {
+                    background-color: $palletColor3;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
